@@ -1,0 +1,53 @@
+<div class="col-md-12">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">VxStream Sandbox</h4>
+            <p class="category">Detailed Results</p>
+        </div>
+        <div class="content">
+            <hr />
+            <div class="stats">
+                <label>Submit Name</label>
+                <div class="labeled-content">{{results.submitname}}</div>
+                <label>Size</label>
+                <div class="labeled-content">{{results.size}}</div>
+                <label>Type</label>
+                <div class="labeled-content">{{results.type}}</div>
+                <label>Analysis Start Time</label>
+                <div class="labeled-content">{{results.analysis_start_time}}</div>
+                <label>Environment</label>
+                <div class="labeled-content">{{results.environmentId}} {{results.environmentDescription}}</div>
+                <label>Is Interesting</label>
+                <div class="labeled-content">{{results.isinteresting}}</div>
+                <label>Verdict</label>
+                <div class="labeled-content">{{results.verdict}}</div>
+                <label>Threat Level</label>
+                <div class="labeled-content">{{results.threatlevel}}</div>
+                <label>Threat Score</label>
+                <div class="labeled-content">{{results.threatscore}}</div>
+                <label>AV Detect</label>
+                <div class="labeled-content">{{results.avdetect}}</div>
+                <label>Total Processes</label>
+                <div class="labeled-content">{{results.total_processes}}</div>
+                <label>Total Network Connections</label>
+                <div class="labeled-content">{{results.total_network_connections}}</div>
+                <label>Total Signatures</label>
+                <div class="labeled-content">{{results.total_signatures}}</div>
+            </div>
+            <div class="footer">
+                <hr />
+                <div class="stats">
+                    <ul>
+                        {% if current_user.has_permission('vxstream_access') %}
+                            <li><a href="{{results.URL}}" target="_blank">
+                                    <i class="pe-7s-link"></i>View Report
+                                </a>
+                            </li>
+                        {% endif %}
+                        {{support_files(name)}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
