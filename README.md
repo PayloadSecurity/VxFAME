@@ -1,5 +1,5 @@
 # VxFame
-*VxFame* is the name given to the project that integrates [FAME](https://certsocietegenerale.github.io/fame/), an open-source malware analysis framework written in Python 2.7.x, with the RESTful Application Programming Interface (API) of [VxStream Sandbox](https://www.vxstream-sandbox.com/), an online sandbox for malware analysis belonging to Payload Security. The project relates to **two FAME modules** that integrate with the API of VxStream Sandbox, one being a **processing module** and the other a **threat intelligence module**. The processing module is under `vxstream` while the threat intelligence module is under `intelligence`. The structure of the modules are valid with the [FAME development instructions](https://fame.readthedocs.io/en/latest/modules.html) and are as follows:
+*VxFame* is the name given to the project that integrates [FAME](https://certsocietegenerale.github.io/fame/), an open-source malware analysis framework written in Python 2.7.x, with the RESTful Application Programming Interface (API) of [VxStream Sandbox](https://www.vxstream-sandbox.com/), an online sandbox for malware analysis belonging to Payload Security. The project relates to **two FAME modules** that integrate with the API of Falcon Sandbox, one being a **processing module** and the other a **threat intelligence module**. The processing module is under `vxstream` while the threat intelligence module is under `intelligence`. The structure of the modules are valid with the [FAME development instructions](https://fame.readthedocs.io/en/latest/modules.html) and are as follows:
 * `vxstream/__init__.py`: empty file that identifies `vxstream` as a valid Python package to be recognized by FAME;
 * `vxstream/details.html`: HTML and Jinja2 template code for displaying results graphically in the web interface;
 * `vxstream/requirements.txt`: list of Python dependencies that the module uses, depicting only [`requests`](https://github.com/requests/requests) for HTTP interaction;
@@ -63,7 +63,7 @@ On the other hand, noteworthy **variables** are described as follows:
 * `tags`: `list` of `str` with tags characterizing an indicator;
 * `indicators`: `list` of `dict` with a name and a description of the indicator.
 
-# VxStream Sandbox API List
+# Falcon Sandbox API List
 The `VxStream` and `VxStreamIntelligence` modules consume a selected few API resources from VxStream Sandbox to achieve their integration with FAME and thereby fulfill their purpose of malware analysis and reporting. The **full list** and description of API resources used by the modules is, in alphabetical order, the following:
 * `/api/result`: used to retrieve particular result data of an analysis, namely full HTML reports, memory dumps and network traffic captures;
 * `/api/sample-dropped-files/`: used to download potentially malicious files dropped during an analysis;
