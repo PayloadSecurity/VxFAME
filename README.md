@@ -101,3 +101,5 @@ https://certsocietegenerale.github.io/fame/<br />
 https://github.com/certsocietegenerale/fame<br />
 https://github.com/certsocietegenerale/fame_modules<br />
 https://fame.readthedocs.io/en/latest/
+
+Copyright (C) 2019 Hybrid Analysis GmbH
